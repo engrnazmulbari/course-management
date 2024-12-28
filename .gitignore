@@ -34,7 +34,6 @@ build/
 .classpath
 .gitattributes
 .project
-HELP.md
 mvnw
 mvnw.cmd
 target
