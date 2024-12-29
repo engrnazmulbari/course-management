@@ -1,13 +1,10 @@
-pipeline{
-	agent {label "linux"}
-	environment {
-	 CI= 'true'
-	}
-	stages{
-		stage('Build'){
-			steps{
-				echo "hello"
-			}
-		}
-	}
+pipeline {
+    agent any
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+    }
 }
