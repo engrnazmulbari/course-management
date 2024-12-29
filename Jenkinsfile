@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Maven Build'){
         	steps{
-        	    bat "mvn clean package -PotherOutputDir"
+        	    bat "mvn clean package"
         	}
             
         }

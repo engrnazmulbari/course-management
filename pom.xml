@@ -42,22 +42,14 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-	
-	<profiles>
-	    <profile>
-	        <id>otherOutputDir</id>
-	       	<build>
-				<directory>E:\\TOMCAT\\apache-tomcat-10.1.34\\webapps</directory>
-				<plugins>
-					<plugin>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-maven-plugin</artifactId>
-					</plugin>
-				</plugins>
-			</build>
-	    </profile>
-	</profiles>
 
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
