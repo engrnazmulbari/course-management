@@ -1,11 +1,18 @@
 pipeline { 
     agent any  
+    environment{
+        PATH="E:/apache-maven-3.9.9/bin:$PATH"
+    }
+
     stages { 
-        stage('Build') { 
+        stage('Initialize') { 
             steps { 
                echo 'This is a minimal pipeline.' 
-               sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
+        stage('Maven Build'){
+            sh "mvn clean install"
+        }
+
     }
 }
