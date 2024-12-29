@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Maven Build'){
         	steps{
-        	    bat "mvn clean install"
+        	    bat "mvn clean install -Ddir=E:/TOMCAT/apache-tomcat-10.1.34/webapps"
         	}
             
         }
